@@ -8,11 +8,29 @@
 
   // EDITING STARTS HERE (you dont need to edit anything above this line)
 
-  var db = false;
+  var db = new PouchDB('todos');;
   var remoteCouch = false;
 
   // We have to create a new todo document and enter it in the database
   function addTodo(text) {
+
+    var todo = {
+      _id: new Date().toISOString(),
+      title: text,
+      completed: false
+    };
+
+    // db.put(todo, function callback(err, result) {
+    //   if (!err) {
+    //     console.log('Successfully posted a todo!');
+    //   }
+    // });
+
+    db.put(todo)
+      .then(console.log('todo insertado'))
+      .catch(console.log)
+
+
   }
 
   // Show the current list of todos by reading them from the database
