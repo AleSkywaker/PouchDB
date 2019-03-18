@@ -31,7 +31,11 @@
 	function showTodos() {
 		// db.allDocs({ include_docs: true, descending: true }, function(err, doc) {
 		// 	redrawTodosUI(doc.rows);
-		// });
+    // });
+    db.allDocs({include_docs: true, descending: true})
+      .then(doc=>{
+        redrawTodosUI(doc.rows);
+      })
 	}
 
 	function checkboxChanged(todo, event) {}
