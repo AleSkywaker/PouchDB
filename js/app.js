@@ -10,10 +10,12 @@
 	var db = new PouchDB('todos');
 	var remoteCouch = false;
 
-	db.changes({
-		since: 'now',
-		live: true
-	  }).on('change', showTodos);
+	db
+		.changes({
+			since: 'now',
+			live: true
+		})
+		.on('change', showTodos);
 
 	// We have to create a new todo document and enter it in the database
 	function addTodo(text) {
@@ -38,13 +40,16 @@
 		// 	redrawTodosUI(doc.rows);
 		// });
 		db.allDocs({ include_docs: true, descending: false }).then((doc) => {
-			console.log(doc.rows)
-			console.log(doc.rows.length)
+			console.log(doc.rows);
+			console.log(doc.rows.length);
 			redrawTodosUI(doc.rows);
 		});
 	}
 
-	function checkboxChanged(todo, event) {}
+	function checkboxChanged(todo, event) {
+		todo.completed = event.target.checked;
+		db.put(todo);
+	}
 
 	// User pressed the delete button for a todo, delete it
 	function deleteButtonPressed(todo) {}
