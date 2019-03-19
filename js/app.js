@@ -37,7 +37,7 @@
 		// db.allDocs({ include_docs: true, descending: true }, function(err, doc) {
 		// 	redrawTodosUI(doc.rows);
 		// });
-		db.allDocs({ include_docs: true, descending: true }).then((doc) => {
+		db.allDocs({ include_docs: true, descending: false }).then((doc) => {
 			redrawTodosUI(doc.rows);
 		});
 	}
