@@ -10,6 +10,11 @@
 	var db = new PouchDB('todos');
 	var remoteCouch = false;
 
+	db.changes({
+		since: 'now',
+		live: true
+	  }).on('change', showTodos);
+
 	// We have to create a new todo document and enter it in the database
 	function addTodo(text) {
 		var todo = {
