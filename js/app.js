@@ -47,6 +47,8 @@
 	}
 
 	function checkboxChanged(todo, event) {
+		console.log(todo)
+		console.log(event)
 		todo.completed = event.target.checked;
 		db.put(todo);
 	}
