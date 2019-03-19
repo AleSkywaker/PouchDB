@@ -38,6 +38,7 @@
 		// 	redrawTodosUI(doc.rows);
 		// });
 		db.allDocs({ include_docs: true, descending: false }).then((doc) => {
+			console.log(doc.rows)
 			redrawTodosUI(doc.rows);
 		});
 	}
