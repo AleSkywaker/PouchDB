@@ -40,8 +40,8 @@
 		// 	redrawTodosUI(doc.rows);
 		// });
 		db.allDocs({ include_docs: true, descending: false }).then((doc) => {
-			console.log(doc.rows);
-			console.log(doc.rows.length);
+			// console.log(doc.rows);
+			// console.log(doc.rows.length);
 			redrawTodosUI(doc.rows);
 		});
 	}
