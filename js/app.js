@@ -50,7 +50,8 @@
 		console.log(todo)
 		console.log(event)
 		todo.completed = event.target.checked;
-		db.put(todo);
+		db.put(todo)
+		.then(console.log("Registro actualizado"))
 	}
 
 	// User pressed the delete button for a todo, delete it
