@@ -1,6 +1,10 @@
 (function() {
 	'use strict';
 
+	if ('serviceWorker' in navigator) {
+		navigator.serviceWorker.register('/service-worker.js');
+	  }
+
 	var ENTER_KEY = 13;
 	var newTodoDom = document.getElementById('new-todo');
 	var syncDom = document.getElementById('sync-wrapper');
