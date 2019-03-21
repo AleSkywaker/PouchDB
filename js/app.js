@@ -63,6 +63,9 @@
 	// the new title or delete the todo if the title is empty
 	function todoBlurred(todo, event) {
 		var trimmedText = event.target.value.trim();
+
+		if(trimmedText.length <= 0) return;
+
 		if (!trimmedText) {
 			db.remove(todo);
 		} else {
