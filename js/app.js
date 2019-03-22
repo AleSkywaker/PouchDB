@@ -2,7 +2,7 @@
 	'use strict';
 
 	if ('serviceWorker' in navigator) {
-		navigator.serviceWorker.register('/service-worker.js');
+		navigator.serviceWorker.register('/sw.js');
 	  }
 
 	var ENTER_KEY = 13;
