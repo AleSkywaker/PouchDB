@@ -7,7 +7,7 @@ const INMUTABLE_CACHE = 'inmutable-v1';
 const APP_SHELL = [
 	'/',
 	'index.html',
-	'css/style.css',
+	'style/base.css"',
 	'img/avatars/hulk.jpg',
 	'img/avatars/ironman.jpg',
 	'img/avatars/spiderman.jpg',
