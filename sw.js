@@ -9,7 +9,8 @@ const APP_SHELL = [
 	'index.html',
 	'style/base.css"',
 	'js/base.js',
-	'js/app.js'
+	'js/app.js',
+	'style/bg.png'
 ];
 
 const APP_SHELL_INMUTABLE = [
