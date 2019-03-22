@@ -8,13 +8,8 @@ const APP_SHELL = [
 	'/',
 	'index.html',
 	'style/base.css"',
-	'img/avatars/hulk.jpg',
-	'img/avatars/ironman.jpg',
-	'img/avatars/spiderman.jpg',
-	'img/avatars/thor.jpg',
-	'img/avatars/wolverine.jpg',
-	'js/app.js',
-	'js/sw-utils.js'
+	'js/base.js',
+	'js/app.js'
 ];
 
 const APP_SHELL_INMUTABLE = [
